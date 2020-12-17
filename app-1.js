@@ -32,7 +32,24 @@ const products = [
 Product.prototype.MakeDiscount = function (discount) {
     this.price = this.price - (this.price * discount / 100);
 }
-for (let product of products) {
+for (let Product of products) {
     Product.MakeDiscount(25);
 }
 console.log(products);
+
+// ES-6
+class Productt {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    MakePercentDiscount() {
+        this.price = this.price - (this.price * 25 / 100);
+    }
+}
+
+const productt1 = new Productt("tovar1", 230);
+productt1.MakePercentDiscount(25);
+
+console.log(productt1);
