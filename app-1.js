@@ -32,7 +32,7 @@ const products = [
 Product.prototype.MakeDiscount = function (discount) {
     this.price = this.price - (this.price * discount / 100);
 }
-for (let product of products) {
+for (let Product of products) {
     Product.MakeDiscount(25);
 }
 console.log(products);
